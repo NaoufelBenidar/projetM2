@@ -68,7 +68,7 @@ def combine_data(repository_data):
     """ Assemble tous les fichiers nettoyés en un seul
 
         Args : 
-            repository_data (str): Repertoire contenant tous les fichiers nettoyés
+            repository_data (str): Répertoire contenant tous les fichiers nettoyés
     
     """
 
@@ -87,7 +87,7 @@ def read_parquet_file(repository_data):
         il affiche le nombre de lignes
 
         Args : 
-            repository_data (str): Chemin vers le répertoir contenant les datasets
+            repository_data (str): Chemin vers le répertoire contenant les datasets
         
         Returns : 
             data (DataFrame) : le dataset modifié
@@ -110,7 +110,7 @@ def read_csv_file(repository_data):
         il affiche le nombre de lignes
 
         Args : 
-            repository_data (str): Chemin vers le répertoir contenant les datasets
+            repository_data (str): Chemin vers le répertoire contenant les datasets
         
         Returns : 
             data (DataFrame) : le dataset modifié
@@ -132,7 +132,7 @@ def delete_columns(data, data_json):
     """ Supprime les colonnes non présentes dans le fichier features.json
 
         Args : 
-            data (DataFrame): DataSet Pandas traîté actuellement
+            data (DataFrame): DataSet Pandas traité actuellement
             data_json (Dictionnaire) : données du fichier features.json
         
         Returns : 
@@ -154,14 +154,14 @@ def delete_columns(data, data_json):
 
 
 def is_values_null(data, file) :
-    """ Vérifie si il existe des valeurs nulles dans le dataset en traitement
+    """ Vérifie s'il existe des valeurs nulles dans le dataset en traitement
 
         Args : 
             data (pd.DataFrame): le dataset
             file (str): nom du fichier contenant le dataset
         
         Returns : 
-            (bool) : True si il y a des des valeurs nulles et False sinon
+            (bool) : True s'il y a des des valeurs nulles et False sinon
     """
 
     col_null = []
@@ -184,9 +184,9 @@ def is_values_null(data, file) :
 
 
 def mixed_type_columns(data):
-    """ Vérifie si il y a des colones contenant plusieurs types différents, si c'est le cas,
-    un seul type est conservé et les valeurs sont transformé ou supprimée puis le fichier est enregistré
-    (ici seul le mélange booléen et int/float a été traîté)
+    """ Vérifie s'il y a des colonnes contenant plusieurs types différents, si c'est le cas,
+    un seul type est conservé et les valeurs sont transformées ou supprimées puis le fichier est enregistré
+    (ici seul le mélange booléen et int/float a été traité)
 
     Args : 
         data (pd.DataFrame): le dataset
@@ -235,11 +235,11 @@ def clean_db_null(data, file):
 
 
 def clean_db_outlier(data, data_json, file) :
-    """ Supprime les données abérantes en se basant sur le fichier features.json
+    """ Supprime les données aberrantes en se basant sur le fichier features.json
 
     Args : 
         data (pd.DataFrame): le dataset
-        data_json (Dictionnaire): contient les informations sur le dataset pour le néttoyer
+        data_json (Dictionnaire): contient les informations sur le dataset pour le nettoyer
         file (str): nom du dataset
     
     """
