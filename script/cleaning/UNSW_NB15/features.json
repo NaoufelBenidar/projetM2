@@ -1,0 +1,31 @@
+{
+    "state" : ["nothing"],
+    "service" : ["nothing"],
+    "proto" : ["nothing"],
+    "attack_cat" : ["nothing"],
+
+
+    "ct_dst_sport_ltm" : ["above equal", 0],
+    "ct_srv_dst" : ["above equal", 0],
+    "ct_src_ltm" : ["above equal", 0],
+    "ct_state_ttl" : ["nothing"],
+
+
+    "dbytes" : ["above equal", 0],
+    "dttl" : ["between", 0, 255],
+    "dmeansz" : ["above equal", 0],
+    "dtcpb" : ["above equal", 0],
+    "dload" : ["above equal", 0],
+    "dur" : ["above equal", 0],
+
+
+    "sbytes" : ["above equal", 0],
+    "smeansz" : ["above equal", 0],
+    "sload" : ["above equal", 0],
+    "stcpb" : ["above equal", 0],
+    "sttl" : ["between", 0, 255],
+    "sjit" : ["nothing"],
+    "sintpkt" : ["nothing"],
+    "synack" : ["nothing"]
+    
+}
